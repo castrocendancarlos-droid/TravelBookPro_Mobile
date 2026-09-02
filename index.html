@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0878d1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="TravelBook" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png" />
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>TravelBook Pro</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand"><img src="assets/icon.svg" alt="" /><span>TravelBook <b>Pro</b></span></div>
+        <button class="icon-button" id="installButton" hidden aria-label="Instalar aplicación">⇩</button>
+        <button class="icon-button" data-action="open-settings" aria-label="Ajustes">⚙</button>
+      </header>
+
+      <main id="app" tabindex="-1"></main>
+
+      <nav class="tabbar" aria-label="Navegación principal">
+        <button class="nav-item active" data-page="dashboard"><span>⌂</span>Inicio</button>
+        <button class="nav-item" data-page="trips"><span>✈</span>Viajes</button>
+        <button class="nav-item" data-page="activity"><span>◷</span>Agenda</button>
+        <button class="nav-item" data-page="expenses"><span>€</span>Gastos</button>
+        <button class="nav-item" data-page="more"><span>•••</span>Más</button>
+      </nav>
+    </div>
+    <div class="modal-layer" id="modalLayer" hidden></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
